@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Widget = styled.div`
   margin-top: 24px;
@@ -33,7 +33,7 @@ Widget.Header = styled.div`
   }
 `;
 
-// Content pertence ao Widget 
+// Content pertence ao Widget
 Widget.Content = styled.header`
   padding: 24px 32px 32px 32px;
   & > *:first-child {
@@ -48,4 +48,4 @@ Widget.Content = styled.header`
   }
 `;
 
-export default Widget; 
+export default Widget;

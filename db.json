@@ -1,29 +1,67 @@
 {
-    "bg": "https://pausaprocafe.blog.br/wp-content/uploads/2020/04/maxresdefault.jpg",
+    "bg": "https://br.web.img3.acsta.net/r_1920_1080/pictures/20/06/04/16/48/2345905.jpg",
     "logo":"https://upload.wikimedia.org/wikipedia/commons/8/8a/Vis_a_Vis_logo.png",
     "title": "Vis a Quiz",
     "description": "Teste seus conhecimentos sobre a série Vis a Vis. Cuidado, contém spoilers!!!",
     "questions": [
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
-        "description": "Essa é pra aquecer",
-        "answer": 2,
+        "image": "https://thumbs.gfycat.com/AmusedSimilarBlesbok-size_restricted.gif",
+        "title": "Por que Soledad matou seu marido?",
+        "description": "Aiaiai",
+        "answer": 0,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "Porque ele traiu ela",
+          "Porque ele fugiu de casa",
+          "Porque ele roubou o din heiro dela",
+          "Porque ele expulsou ela de casa"
+        ]
+      },
+      {
+        "image": "https://thumbs.gfycat.com/AmusedSimilarBlesbok-size_restricted.gif",
+        "title": "Por que Castilho mata a mãe da Macarena?",
+        "description": "Essa é dificil",
+        "answer": 3,
+        "alternatives": [
+          "Porque ela era uma criminosa",
+          "Porque ele iria matar alguém no lugar onde ela estava",
+          "Porque ele confundiu ela com a mãe do Sandoval",
+          "Porque ela trocou de véu com a mãe do Egípicio"
         ]
       },
       {
         "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Como fazer um background gradiente com css?",
-        "description": "Faz tempo em haha",
-        "answer": 0,
+        "title": "Qual o nome da bebê do Sandoval com a Saray?",
+        "description": "Nem o pai sabia kkk",
+        "answer": 1,
         "alternatives": [
-           "background: linear-gradient(#e66465, #9198e5);",
-           "background: gradient(#e66465, #9198e5);"
+          "Sarah",
+          "Estrela",
+          "Sol"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
+        "title": "Quem era o Sandoval?",
+        "description": "Cruzes!",
+        "answer": 4,
+        "alternatives": [
+          "Carcereiro",
+          "Diretor do presídio",
+          "Cozinheiro",
+          "Policial",
+          "Médico"
+        ]
+      },
+      {
+        "image": "https://i.pinimg.com/originals/dd/08/43/dd08435d19604f44802163e441b73781.gif",
+        "title": "Qual o animal de estimação de Zulema?",
+        "description": "Uma cobra talvez?",
+        "answer": 2,
+        "alternatives": [
+          "Hamster",
+          "Cobra",
+          "Escorpião",
+          "Tartaruga"
         ]
       }
     ],
@@ -33,8 +71,8 @@
     "theme": {
       "colors": {
         "primary": "#ec9622",
-        "secondary": "#feda00",
-        "mainBg": "#000000",
+        "secondary": "#e0b42b",
+        "mainBg": "#3d4139",
         "contrastText": "#ffffff",
         "wrong": "#E66432",
         "success": "#15B33D"

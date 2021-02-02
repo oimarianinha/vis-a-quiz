@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import { useRouter } from 'next/router';
 
 import db from '../db.json';
@@ -9,17 +8,9 @@ import QuizBackground from '../src/components/QuizBackground';
 import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import Head from '../src/components/Head';
-
-export const QuizContainer = styled.div`
-  width: 100%;
-  max-width: 350px;
-  padding-top: 45px;
-  margin: auto 10%;
-  @media screen and (max-width: 500px){
-    margin: auto;
-    padding: 15px;
-  }
-`;
+import Input from '../src/components/Input';
+import Button from '../src/components/Button';
+import QuizContainer from '../src/components/QuizContainer';
 
 export default function Home() {
   const router = useRouter();
@@ -29,27 +20,26 @@ export default function Home() {
     <QuizBackground backgroundImage={db.bg}>
       <Head title={db.title} description={db.description} bg={db.bg} />
       <QuizContainer>
-        <Logo logo={db.logo}/>
+        <Logo logo={db.logo} />
         <Widget>
           <Widget.Header>
             <h1> Vis a Quiz </h1>
           </Widget.Header>
           <Widget.Content>
-            <form onSubmit= {function (event){
+            <form onSubmit={(event) => {
               event.preventDefault();
-              router.push(`/quiz?name=${name}`)
-            }}>
-              <input 
-                onChange = {function(event) {
-                  // State
-                  // name = event.target.value;
-                  setName(event.target.value);
-                }}
-                placeholder="Digite seu apelido" id='name' 
+              router.push(`/quiz?name=${name}`);
+            }}
+            >
+              <Input
+                name="nomeDoUsuario"
+                onChange={(event) => { setName(event.target.value); }}
+                placeholder="Digite seu apelido"
+                value={name}
               />
-              <button type="submit" disabled={name.length === 0}>
+              <Button type="submit" disabled={name.length === 0}>
                 Jogar!
-              </button>
+              </Button>
             </form>
           </Widget.Content>
         </Widget>
@@ -57,7 +47,7 @@ export default function Home() {
         <Widget>
           <Widget.Content>
             <h1> Quizes da Galera</h1>
-            <p>tiam tincidunt ornare semper. Fusce in facilisis metus, a mattis risus. Ut pretium lorem finibus nulla malesuada, quis facilisis me</p>
+            <p>tiam tincidunt ornare semper. Fusce in facilisis metus, a mattis risus.</p>
           </Widget.Content>
         </Widget>
         <Footer />

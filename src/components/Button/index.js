@@ -12,6 +12,7 @@ const Button = styled.button`
   font-weight: bold;
   font-size: 14px;
   line-height: 1;
+  text-align: center;
   text-transform:uppercase;
   outline: 0;
   cursor: pointer;

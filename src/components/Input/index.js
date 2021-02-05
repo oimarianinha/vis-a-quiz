@@ -25,10 +25,6 @@ export default function Input({ onChange, placeholder, ...props }) {
   );
 }
 
-Input.defaultProps = {
-
-};
-
 Input.propTypes = {
   onChange: PropTypes.func.isRequired,
   placeholder: PropTypes.string.isRequired,

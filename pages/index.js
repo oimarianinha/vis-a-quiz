@@ -1,8 +1,12 @@
+// React / Next
 import React from 'react';
+import { motion } from 'framer-motion';
 import { useRouter } from 'next/router';
 
+// Components
 import db from '../db.json';
 import Widget from '../src/components/Widget';
+import Link from '../src/components/Link';
 import Logo from '../src/components/Logo';
 import QuizBackground from '../src/components/QuizBackground';
 import Footer from '../src/components/Footer';
@@ -21,7 +25,16 @@ export default function Home() {
       <Head title={db.title} description={db.description} bg={db.bg} />
       <QuizContainer>
         <Logo logo={db.logo} />
-        <Widget>
+        <Widget
+          as={motion.section}
+          transition={{ delay: 0, duration: 0.5 }}
+          variants={{
+            show: { opacity: 1, y: '0' },
+            hidden: { opacity: 0, y: '100%' },
+          }}
+          initial="hidden"
+          animate="show"
+        >
           <Widget.Header>
             <h1> Vis a Quiz </h1>
           </Widget.Header>
@@ -37,17 +50,47 @@ export default function Home() {
                 placeholder="Digite seu apelido"
                 value={name}
               />
-              <Button type="submit" disabled={name.length === 0}>
+              <Button
+                type="submit"
+                disabled={name.length === 0}
+              >
                 Jogar!
               </Button>
             </form>
           </Widget.Content>
         </Widget>
 
-        <Widget>
+        <Widget
+          as={motion.section}
+          transition={{ delay: 0.5, duration: 0.5 }}
+          variants={{
+            show: { opacity: 1 },
+            hidden: { opacity: 0 },
+          }}
+          initial="hidden"
+          animate="show"
+        >
           <Widget.Content>
             <h1> Quizes da Galera</h1>
-            <p>tiam tincidunt ornare semper. Fusce in facilisis metus, a mattis risus.</p>
+            {db.external.map((linkExterno) => {
+              const [projectName, githubUser] = linkExterno
+                .replace('https:', '')
+                .replace(/\//g, '')
+                .split('.');
+
+              return (
+                <ul>
+                  <li key={linkExterno}>
+                    <Widget.Topic
+                      as={Link}
+                      href={`/quiz/${projectName}___${githubUser}`}
+                    >
+                      {`${githubUser}/${projectName}`}
+                    </Widget.Topic>
+                  </li>
+                </ul>
+              );
+            })}
           </Widget.Content>
         </Widget>
         <Footer />

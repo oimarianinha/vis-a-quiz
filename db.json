@@ -67,9 +67,7 @@
     ],
     "external": [
       "https://pato-quiz-nextjs.theedouglasam.vercel.app/",
-      "https://1sec-quiz.victoroda.vercel.app/",
-      "https://quiz-cavaleiro-zodiaco.vercel.app/",
-      "https://alura-quiz-frontend-fischerafael.fischerafael.vercel.app/"
+      "https://1sec-quiz.victoroda.vercel.app/"
     ],
     "theme": {
       "colors": {
